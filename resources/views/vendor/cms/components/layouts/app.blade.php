@@ -9,7 +9,7 @@
 <body class="antialiased">
 
 <header class="py-8 bg-gray-600 flex flex-col items-center justify-center">
-    <a href="{{ route('pages.home') }}" class="hover:cursor-pointer text-3xl font-bold text-white leading-none uppercase">
+    <a href="{{ route('pages.home') }}" class="hover:cursor-pointer text-3xl font-bold text-white leading-none">
         {{ config('app.name') }}
     </a>
     <ul class="mt-8 flex items-center justify-center divide-x-2 divide-gray-100">
