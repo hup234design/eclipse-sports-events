@@ -42,7 +42,7 @@
 {{--        </li>--}}
         <li class="leading-none px-4">
             <a href="{{ route('posts.index') }}" class="hover:cursor-pointer text-gray-100 font-semibold text-lg leading-none">
-                POSTS
+                Posts
             </a>
         </li>
     </ul>
@@ -88,7 +88,7 @@
 {{--        </li>--}}
         <li class="leading-none px-4">
             <a href="{{ route('posts.index') }}" class="hover:cursor-pointer text-gray-100 font-semibold text-lg leading-none">
-                POSTS
+                Posts
             </a>
         </li>
     </ul>
