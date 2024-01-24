@@ -94,5 +94,7 @@
     </ul>
 </footer>
 
+@include('cookie-consent::index')
+
 </body>
 </html>
