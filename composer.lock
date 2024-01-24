@@ -2386,12 +2386,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hup234design/filament-cms.git",
-                "reference": "80651a83dcbd9a6438a540593eeb6f524fc81547"
+                "reference": "7798338425c4c90a052d3e45f514f41938c384e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hup234design/filament-cms/zipball/80651a83dcbd9a6438a540593eeb6f524fc81547",
-                "reference": "80651a83dcbd9a6438a540593eeb6f524fc81547",
+                "url": "https://api.github.com/repos/hup234design/filament-cms/zipball/7798338425c4c90a052d3e45f514f41938c384e3",
+                "reference": "7798338425c4c90a052d3e45f514f41938c384e3",
                 "shasum": ""
             },
             "require": {
@@ -2434,7 +2434,7 @@
                 "issues": "https://github.com/hup234design/filament-cms/issues",
                 "source": "https://github.com/hup234design/filament-cms/tree/main"
             },
-            "time": "2024-01-24T10:10:59+00:00"
+            "time": "2024-01-24T10:12:28+00:00"
         },
         {
             "name": "intervention/image",
