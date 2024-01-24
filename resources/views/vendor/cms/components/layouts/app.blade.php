@@ -31,11 +31,6 @@
 {{--            </a>--}}
 {{--        </li>--}}
 {{--        <li class="leading-none px-6">--}}
-{{--            <a href="{{ route('events.index') }}" class="hover:cursor-pointer text-gray-100 font-semibold text-lg leading-none uppercase">--}}
-{{--                EVENTS--}}
-{{--            </a>--}}
-{{--        </li>--}}
-{{--        <li class="leading-none px-6">--}}
 {{--            <a href="{{ route('testimonials.index') }}" class="hover:cursor-pointer text-gray-100 font-semibold text-lg leading-none uppercase">--}}
 {{--                TESTIMONIALS--}}
 {{--            </a>--}}
@@ -74,11 +69,6 @@
 {{--        <li class="leading-none px-6">--}}
 {{--            <a href="{{ route('services.index') }}" class="hover:cursor-pointer text-gray-100 font-semibold text-lg leading-none uppercase">--}}
 {{--                SERVICES--}}
-{{--            </a>--}}
-{{--        </li>--}}
-{{--        <li class="leading-none px-6">--}}
-{{--            <a href="{{ route('events.index') }}" class="hover:cursor-pointer text-gray-100 font-semibold text-lg leading-none uppercase">--}}
-{{--                EVENTS--}}
 {{--            </a>--}}
 {{--        </li>--}}
 {{--        <li class="leading-none px-6">--}}
