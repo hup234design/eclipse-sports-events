@@ -21,7 +21,9 @@ return [
         'avif',
     ],
     'curation_presets' => [
-        \Awcodes\Curator\Curations\ThumbnailPreset::class,
+        \Hup234design\FilamentCms\Curator\Curations\ThumbnailPreset::class,
+        \Hup234design\FilamentCms\Curator\Curations\HeaderPreset::class,
+        \Hup234design\FilamentCms\Curator\Curations\SeoPreset::class,
     ],
     'directory' => 'media',
     'disk' => env('FILAMENT_FILESYSTEM_DISK', 'public'),
@@ -37,7 +39,8 @@ return [
     'is_limited_to_directory' => false,
     'is_tenant_aware' => true,
     'max_size' => 5000,
-    'model' => \Awcodes\Curator\Models\Media::class,
+    //'model' => \Awcodes\Curator\Models\Media::class,
+    'model' => \Hup234design\FilamentCms\Models\CmsMedia::class,
     'min_size' => 0,
     'path_generator' => null,
     'resources' => [

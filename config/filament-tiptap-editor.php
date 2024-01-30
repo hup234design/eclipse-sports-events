@@ -2,7 +2,7 @@
 
 return [
     'direction' => 'ltr',
-    'max_content_width' => '5xl',
+    'max_content_width' => 'full',
     'disable_stylesheet' => false,
 
     /*
@@ -24,6 +24,12 @@ return [
         'simple' => ['heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list', '|', 'bold', 'italic', 'lead', 'small', '|', 'link', 'media'],
         'minimal' => ['bold', 'italic', 'link', 'bullet-list', 'ordered-list'],
         'none' => [],
+
+        'cms' => [
+            'heading', 'bullet-list', 'ordered-list', 'blockquote', 'hr', '|',
+            'bold', 'italic', 'underline', 'lead', 'color', 'align-left', 'align-center', 'align-right', '|',
+            'link', 'media', 'oembed', 'table', '|', 'source',
+        ],
     ],
 
     /*
@@ -32,8 +38,8 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'media_action' => FilamentTiptapEditor\Actions\MediaAction::class,
-    //    'media_action' => Awcodes\Curator\Actions\MediaAction::class,
+    //    'media_action' => FilamentTiptapEditor\Actions\MediaAction::class,
+    'media_action' => Awcodes\Curator\Actions\MediaAction::class,
     'link_action' => FilamentTiptapEditor\Actions\LinkAction::class,
 
     /*
@@ -59,7 +65,9 @@ return [
     | See https://filamentphp.com/docs/3.x/panels/installation#file-upload
     |
     */
-    'accepted_file_types' => ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml', 'application/pdf'],
+    //'accepted_file_types' => ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml', 'application/pdf'],
+    'accepted_file_types' => ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml'],
+
     'disk' => 'public',
     'directory' => 'images',
     'visibility' => 'public',
@@ -77,12 +85,12 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'disable_floating_menus' => false,
+    'disable_floating_menus' => true,
     'disable_bubble_menus' => false,
     'disable_toolbar_menus' => false,
 
-    'bubble_menu_tools' => ['bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'link'],
-    'floating_menu_tools' => ['media', 'grid-builder', 'details', 'table', 'oembed', 'code-block', 'blocks'],
+    //'floating_menu_tools' => ['media', 'grid-builder', 'details', 'table', 'oembed', 'code-block', 'blocks'],
+    'floating_menu_tools' => ['media', 'table', 'oembed'],
 
     /*
     |--------------------------------------------------------------------------
