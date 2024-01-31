@@ -2,6 +2,6 @@
 
 return [
     'content_blocks' => [
-        \App\Livewire\ClientsBlock::make(),
+        \App\Livewire\ClientsBlock::class,
     ],
 ];
