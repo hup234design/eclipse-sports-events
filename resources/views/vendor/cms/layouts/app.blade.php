@@ -29,13 +29,23 @@
                 <img src="{{ asset('images/Eclipse-Sports-Events-Logo.png') }}" class="h-16 w-auto xl:h-20">
             </a>
             <ul class="hidden lg:flex items-center font-medium lg:gap-4 xl:gap-8">
-                <li>HOME</li>
-                <li>EVENTS</li>
-                <li>CALENDAR</li>
-                <li>ABOUT</li>
-                <li>CLIENTS</li>
-                <li>NEWS</li>
-                <li>CONTACT</li>
+                @isset($menus['primary_header'])
+                    @foreach($menus['primary_header'] as $item)
+                        @if($item['route'])
+                            <li>
+                                @if($item['route'])
+                                    <a href="{{ route($item['route'], $item['slug']) }}" class="hover:cursor-pointer text-eclipse-blue text-lg uppercase leading-none">
+                                        {{ $item['title'] }}
+                                    </a>
+                               @endif
+                            </li>
+                        @endif
+                    @endforeach
+                @else
+                    <li><a href="{{ route('pages.home') }}" class="hover:cursor-pointer text-eclipse-blue text-lg uppercase leading-none">HOME</a></li>
+                    <li><a href="{{ route('events.index') }}" class="hover:cursor-pointer text-eclipse-blue text-lg uppercase leading-none">EVENTS</a></li>
+                    <li><a href="{{ route('posts.index') }}" class="hover:cursor-pointer text-eclipse-blue text-lg uppercase leading-none">NEWS</a></li>
+                @endisset
             </ul>
             <a class="lg:hidden" href="{{ route('pages.home') }}">
                 <x-heroicon-s-bars-4 class="w-12 h-12 text-eclipse-blue" />
@@ -45,9 +55,9 @@
     </section>
 </header>
 
-<div class="bg-eclipse-primary text-white font-bold">
-    {{ Breadcrumbs::render('posts') }}
-</div>
+{{--<div class="bg-eclipse-primary text-white font-bold">--}}
+{{--    {{ Breadcrumbs::render('posts') }}--}}
+{{--</div>--}}
 
 {{--@section('header')--}}
 {{--@show--}}
@@ -95,13 +105,23 @@
             </div>
         </div>
         <ul class="flex flex-wrap items-center justify-center">
-            <li class="px-4 py-2">Home</li>
-            <li class="px-4 py-2">Events</li>
-            <li class="px-4 py-2">Calendar</li>
-            <li class="px-4 py-2">Contact</li>
-            <li class="px-4 py-2">Privacy Policy</li>
-            <li class="px-4 py-2">Terms and Conditions</li>
-            <li class="px-4 py-2">Cookie Policy</li>
+            @isset($menus['primary_footer'])
+                @foreach($menus['primary_footer'] as $item)
+                    @if($item['route'])
+                        <li class="px-4 py-2">
+                            @if($item['route'])
+                                <a href="{{ route($item['route'], $item['slug']) }}" class="hover:cursor-pointer leading-none">
+                                    {{ $item['title'] }}
+                                </a>
+                            @endif
+                        </li>
+                    @endif
+                @endforeach
+            @else
+                <li class="px-4 py-2"><a href="{{ route('pages.home') }}" class="hover:cursor-pointer leading-none">HOME</a></li>
+                <li class="px-4 py-2"><a href="{{ route('events.index') }}" class="hover:cursor-pointer leading-none">EVENTS</a></li>
+                <li class="px-4 py-2"><a href="{{ route('posts.index') }}" class="hover:cursor-pointer leading-none">NEWS</a></li>
+            @endisset
         </ul>
         <div class="text-center">
             <p>©2024 Eclipse Sports Events, All rights reserved.</p>
