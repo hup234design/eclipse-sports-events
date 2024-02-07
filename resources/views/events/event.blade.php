@@ -1,4 +1,4 @@
-<x-cms::layouts.app>
+<x-cms-app-layout>
 
     @section('header')
         <div class="h-[240px]">
@@ -45,4 +45,4 @@
 
 {{--    {{  json_encode($event) }}--}}
 
-</x-cms::layouts.app>
+</x-cms-app-layout>
