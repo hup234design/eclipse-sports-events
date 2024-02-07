@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
+Route::controller(EventsController::class)
+    ->prefix('events')
+    ->group(function () {
+        Route::get(
+            'types/{typeSlug}/{categorySlug}', 'eventCategory')->name('events.category');
+        Route::get('types/{typeSlug}', 'eventType')->name('events.type');
+        Route::get('past', 'pastEvents')->name('events.past');
+        Route::get('{slug}', 'event')->name('events.event');
+        Route::get('/', 'upcomingEvents')->name('events.index');
+    });
+
+
+include base_path() . '/vendor/hup234design/filament-cms/routes/web.php';

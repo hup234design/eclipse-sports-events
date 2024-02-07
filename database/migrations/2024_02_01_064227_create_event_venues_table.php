@@ -11,17 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('event_venues', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('event_location_id')
+                ->nullable()
+                ->constrained()
+                ->cascadeOnDelete();
             $table->string('name');
-            $table->text('description')->nullable();
-            $table->string('url')->nullable();
-            $table->string('logo')->nullable();
-            $table->boolean('is_visible')
-                ->default(true);
-            $table->integer('order_column')
-                ->default(1);
+            $table->string('slug')
+                ->unique();
+            $table->text('description')
+                ->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('event_venues');
     }
 };

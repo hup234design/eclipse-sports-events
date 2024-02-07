@@ -2387,12 +2387,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hup234design/filament-cms.git",
-                "reference": "6b122b745eedbc878cc15163fb667000ecfb77b6"
+                "reference": "d3aafb0e6eb726410a2c345337aa9a1231fa7b97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hup234design/filament-cms/zipball/6b122b745eedbc878cc15163fb667000ecfb77b6",
-                "reference": "6b122b745eedbc878cc15163fb667000ecfb77b6",
+                "url": "https://api.github.com/repos/hup234design/filament-cms/zipball/d3aafb0e6eb726410a2c345337aa9a1231fa7b97",
+                "reference": "d3aafb0e6eb726410a2c345337aa9a1231fa7b97",
                 "shasum": ""
             },
             "require": {
@@ -2403,7 +2403,7 @@
                 "php": "^8.1",
                 "ralphjsmit/laravel-filament-components": "^2.0",
                 "ralphjsmit/laravel-filament-seo": "^1.2",
-                "ryangjchandler/filament-navigation": "^1.0.0-beta4",
+                "solution-forest/filament-tree": "^2.0",
                 "spatie/eloquent-sortable": "^4.1",
                 "spatie/image": "^2.2",
                 "spatie/laravel-cookie-consent": "^3.2",
@@ -2423,8 +2423,12 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
-                    "Hup234design\\FilamentCms\\": "src/"
+                    "Hup234design\\FilamentCms\\": "src/",
+                    "Hup234design\\FilamentCms\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2435,7 +2439,7 @@
                 "issues": "https://github.com/hup234design/filament-cms/issues",
                 "source": "https://github.com/hup234design/filament-cms/tree/main"
             },
-            "time": "2024-01-31T11:13:17+00:00"
+            "time": "2024-02-07T09:24:26+00:00"
         },
         {
             "name": "intervention/image",
@@ -5922,85 +5926,6 @@
             "time": "2023-02-14T16:54:54+00:00"
         },
         {
-            "name": "ryangjchandler/filament-navigation",
-            "version": "v1.0.0-beta4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ryangjchandler/filament-navigation.git",
-                "reference": "b37c4868a32768818265dd29eb773978e923c6eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ryangjchandler/filament-navigation/zipball/b37c4868a32768818265dd29eb773978e923c6eb",
-                "reference": "b37c4868a32768818265dd29eb773978e923c6eb",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "^3.5.1",
-                "filament/filament": "^3.0",
-                "illuminate/contracts": "^10.0",
-                "php": "^8.1",
-                "spatie/laravel-package-tools": "^1.9.2"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.8",
-                "nunomaduro/collision": "^7.0",
-                "nunomaduro/larastan": "^2.0.1",
-                "orchestra/canvas": "^8.0",
-                "orchestra/testbench": "^8.0",
-                "pestphp/pest": "^2.0",
-                "pestphp/pest-plugin-laravel": "^2.0",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpunit/phpunit": "^9.5|^10.0",
-                "spatie/laravel-ray": "^1.26"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "RyanChandler\\FilamentNavigation\\FilamentNavigationServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RyanChandler\\FilamentNavigation\\": "src",
-                    "RyanChandler\\FilamentNavigation\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ryan Chandler",
-                    "email": "support@ryangjchandler.co.uk",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Build structured navigation menus in Filament.",
-            "homepage": "https://github.com/ryangjchandler/filament-navigation",
-            "keywords": [
-                "filament-navigation",
-                "laravel",
-                "ryangjchandler"
-            ],
-            "support": {
-                "issues": "https://github.com/ryangjchandler/filament-navigation/issues",
-                "source": "https://github.com/ryangjchandler/filament-navigation/tree/v1.0.0-beta4"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ryangjchandler",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-09-01T23:38:44+00:00"
-        },
-        {
             "name": "scrivo/highlight.php",
             "version": "v9.18.1.9",
             "source": {
@@ -6077,6 +6002,76 @@
                 }
             ],
             "time": "2021-12-03T06:45:28+00:00"
+        },
+        {
+            "name": "solution-forest/filament-tree",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solutionforest/filament-tree.git",
+                "reference": "c62905fff3b867e2ecaeccbfdfa3b50b3f8858f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/solutionforest/filament-tree/zipball/c62905fff3b867e2ecaeccbfdfa3b50b3f8858f0",
+                "reference": "c62905fff3b867e2ecaeccbfdfa3b50b3f8858f0",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "filament/support": "^3.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.9",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SolutionForest\\FilamentTree\\FilamentTreeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolutionForest\\FilamentTree\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carly",
+                    "email": "info@solutionforest.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a tree layout plugin for Filament Admin",
+            "homepage": "https://github.com/solution-forest/filament-tree",
+            "keywords": [
+                "Solution Forest",
+                "filament-tree",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/solution-forest/filament-tree/issues",
+                "source": "https://github.com/solution-forest/filament-tree"
+            },
+            "time": "2024-01-26T02:36:38+00:00"
         },
         {
             "name": "spatie/backtrace",
