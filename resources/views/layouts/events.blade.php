@@ -1,4 +1,4 @@
-<x-cms::layouts.app>
+<x-cms-app-layout>
     @section('header')
         <div class=" bg-orange-100">
             <div class="max-w-screen-2xl mx-auto p-8">
@@ -33,4 +33,4 @@
             </div>
         </div>
 
-</x-cms::layouts.app>
+</x-cms-app-layout>
