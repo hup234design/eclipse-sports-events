@@ -7,7 +7,16 @@ export default {
         "./vendor/hup234design/filament-cms/**/*.php",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                eclipse: {
+                    primary: '#DF5F1B',
+                    secondary: '#E9930D',
+                    blue: '#202E42',
+                    yellow: '#F3C600',
+                }
+            }
+        },
     },
     plugins: [
         require('@tailwindcss/typography'),
