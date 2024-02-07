@@ -1,5 +1,16 @@
 <x-events-layout>
 
+    <div class="prose max-w-none mb-16">
+        @if($page)
+            <h1>{{ $page->title }}</h1>
+            @if( $page->content ?? null )
+                {!! tiptap_converter()->asHTML($page->content) !!}
+            @endif
+        @else
+            <h1>Events</h1>
+        @endif
+    </div>
+
     @foreach($events as $event)
         <p>
             <a href="{{ route('events.event', $event->slug) }}">

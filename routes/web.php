@@ -23,7 +23,7 @@ Route::controller(EventsController::class)
         Route::get('types/{typeSlug}', 'eventType')->name('events.type');
         Route::get('past', 'pastEvents')->name('events.past');
         Route::get('{slug}', 'event')->name('events.event');
-        Route::get('/', 'upcomingEvents')->name('events.index');
+        Route::get('/', 'index')->name('events.index');
     });
 
 

@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Events\Event;
 use App\Models\Events\EventType;
+use Hup234design\FilamentCms\Models\IndexPage;
 
 class EventsController extends Controller
 {
+
+    public function index() {
+        $page = IndexPage::where('slug', 'events')->first();
+        $events = Event::upcoming()->get();
+        return view('events.index', compact('page','events'));
+    }
+
     public function event($slug) {
         $event = Event::whereSlug($slug)->firstOrFail();
         return view('events.event', compact('event'));
-    }
-
-    public function upcomingEvents() {
-        $events = Event::upcoming()->get();
-        return view('events.events', compact('events'));
     }
 
     public function pastEvents() {
