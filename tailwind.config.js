@@ -7,6 +7,15 @@ export default {
         "./vendor/hup234design/filament-cms/**/*.php",
     ],
     theme: {
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                lg: '3rem',
+                xl: '4rem',
+            },
+        },
         extend: {
             colors: {
                 eclipse: {
