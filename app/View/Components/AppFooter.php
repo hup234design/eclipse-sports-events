@@ -31,7 +31,7 @@ class AppFooter extends Component
 
         $posts = Post::visible()->take(5)->get();
 
-        $events = Event::upcoming()->orderBy('date','asc')->take(5)->get();
+        $events = Event::upcoming()->orderBy('start_date','asc')->take(5)->get();
 
         return view('components.app-footer', compact('menus','posts', 'events'));
     }
