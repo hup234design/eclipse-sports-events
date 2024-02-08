@@ -19,8 +19,8 @@
                     <img src="{{ asset('images/Eclipse-Sports-Events-Logo.png') }}" class="h-16 w-auto xl:h-20">
                 </a>
                 <ul class="hidden lg:flex items-center font-medium lg:gap-4 xl:gap-8">
-                    @if($primary_header)
-                        @foreach($primary_header as $item)
+                    @if($menus['primary'])
+                        @foreach($menus['primary'] as $item)
                             @if($item['route'])
                                 <li>
                                     @if($item['route'])

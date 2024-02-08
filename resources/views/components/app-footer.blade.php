@@ -43,8 +43,8 @@
             </div>
         </div>
         <ul class="flex flex-wrap items-center justify-center">
-            @if($primary_footer)
-                @foreach($primary_footer as $item)
+            @if($menus['primary'])
+                @foreach($menus['primary'] as $item)
                     @if($item['route'])
                         <li class="px-4 py-2">
                             @if($item['route'])

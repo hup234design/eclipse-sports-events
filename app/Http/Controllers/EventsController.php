@@ -22,7 +22,7 @@ class EventsController extends Controller
 
     public function pastEvents() {
         $events = Event::all();
-        return view('events.events', compact('events'));
+        return view('events.index', compact('events'));
     }
 
     public function eventType($typeSlug) {
