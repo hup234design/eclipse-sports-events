@@ -11,10 +11,10 @@ export default {
         container: {
             center: true,
             padding: {
-                DEFAULT: '1rem',
-                sm: '2rem',
-                lg: '3rem',
-                xl: '4rem',
+                DEFAULT: '2rem',
+                sm: '3rem',
+                lg: '4rem',
+                xl: '6rem',
             },
         },
         extend: {
