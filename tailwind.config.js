@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
     content: [
         "./resources/**/*.blade.php",
@@ -18,6 +20,9 @@ export default {
             },
         },
         extend: {
+            fontFamily: {
+                'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
+            },
             colors: {
                 eclipse: {
                     primary: '#DF5F1B',
