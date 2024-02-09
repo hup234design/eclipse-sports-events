@@ -8,4 +8,21 @@
             {!! tiptap_converter()->asHTML($page->content) !!}
         @endif
     </div>
+
+    @if( $page->blocks )
+        <div class="mt-12">
+            @foreach($page->blocks ?? [] as $block)
+                <div class="py-12">
+                    @livewire($block['type'], ['blockData' => $block['data']])
+                </div>
+                {{--                <x-cms::content-blocks.wrapper--}}
+                {{--                    :style="$block['data']['block_style'] ?? 'default'"--}}
+                {{--                    :width="$block['data']['block_width'] ?? 'default'"--}}
+                {{--                >--}}
+                {{--                    @livewire($block['type'], ['blockData' => $block['data']])--}}
+                {{--                </x-cms::content-blocks.wrapper>--}}
+            @endforeach
+        </div>
+    @endif
+
 </x-app-layout>
