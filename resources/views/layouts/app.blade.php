@@ -16,15 +16,15 @@
 {{--    {{ Breadcrumbs::render('posts') }}--}}
 {{--</div>--}}
 
-{{--@section('header')--}}
-{{--@show--}}
+@section('heading')
+@show
 
-<img src="https://eclipsesportsevents.com/app/default/assets/images/a30806fa48c0e859066bb3284c035c30.jpg?v=1580543170" />
-
-<main class="my-16">
+<main class="mt-20">
     <div class="container">
         {{ $slot }}
     </div>
+    @section('blocks')
+    @show
 </main>
 
 <x-app-footer />
