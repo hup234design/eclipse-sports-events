@@ -2,6 +2,7 @@
 
 namespace App\Models\Events;
 
+use Carbon\Carbon;
 use Hup234design\FilamentCms\Concerns\HasMediables;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -46,11 +47,9 @@ class Event extends Model
     {
         return $query->whereNotNull('start_date')
             ->where(function ($query) {
-                $now = now();
-
-                $query->where('start_date', '>=', $now)
+                $query->whereDate('start_date', '>=', Carbon::now()->startOfDay())
                     ->orWhereNull('end_date')
-                    ->orWhere('end_date', '>=', $now);
+                    ->whereDate('end_date', '>=', Carbon::now()->startOfDay());
             });
     }
 
@@ -58,12 +57,10 @@ class Event extends Model
     {
         return $query->whereNotNull('start_date')
             ->where(function ($query) {
-                $now = now();
-
-                $query->where('end_date', '<', $now)
+                $query->whereDate('end_date', '<', Carbon::now()->startOfDay())
                     ->orWhereNull('end_date');
             })
-            ->where('start_date', '<', now());
+            ->whereDate('start_date', '<', Carbon::now()->startOfDay());
     }
 
 }
