@@ -1,3 +1,4 @@
 import './bootstrap';
-import Glide from '@glidejs/glide'
-new Glide('.glide').mount()
+
+import Swiper from 'swiper/bundle';
+window.Swiper = Swiper;
